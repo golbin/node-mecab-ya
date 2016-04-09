@@ -49,7 +49,7 @@ So, you can select a mecab library for specific language when you use this and y
 ## Examples
 
 ```
-var mecab = require('mecab-ya');                                         
+var mecab = require('mecab-ya');
 
 var text = '아버지가방에들어가신다';
 
@@ -79,6 +79,8 @@ mecab.nouns(text, function (err, result) {
     */
 });
 ```
+
+You can find out a simple example on [node-mecab-ya-example](https://github.com/golbin/node-mecab-ya-example)
 
 ## TODO
 
