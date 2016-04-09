@@ -30,7 +30,9 @@ var parseFunctions = {
     },
 
     'nouns': function (result, elems) {
-        if (elems[1].split(',')[0].charAt(0) === 'N') {
+        var tag = elems[1].split(',')[0];
+        
+        if (tag === 'NNG' || tag === 'NNP') {
             result.push(elems[0]);
         }
 
