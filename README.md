@@ -19,13 +19,13 @@ You need mecab or mecab-ko for Korean language.
 If you don't have mecab yet, you can install with the prepared script.
 
 ```bash
-$ node_modules/mecab-ya/bin/install-mecab.sh
+$ node_modules/mecab-ya/bin/install-mecab
 ```
 
 For the Korean language.
 
 ```bash
-$ node_modules/mecab-ya/bin/install-mecab.sh ko
+$ node_modules/mecab-ya/bin/install-mecab ko
 ```
 
 ## Usage
