@@ -33,6 +33,7 @@ curl -OL $URL_MECAB_DIC
 tar xfz $DIR_MECAB_DIC.tar.gz
 cd $DIR_MECAB_DIC
 export PATH=$PROJECT_HOME/mecab/bin:$PATH
+./autogen.sh
 ./configure --prefix=$PROJECT_HOME/mecab
 make
 make install
