@@ -15,7 +15,11 @@ var execMecab = function (text, callback) {
     cp.exec(buildCommand(text), function(err, result) {
         if (err) { return callback(err); }
         callback(err, result);
-    });    
+    });
+};
+
+var execMecabSync = function (text) {
+    return String(cp.execSync(buildCommand(text)));
 };
 
 var parseFunctions = {
@@ -63,6 +67,15 @@ var parse = function (text, method, callback) {
     });
 };
 
+var parseSync = function (text, method) {
+    ret = [];
+    result = execMecabSync(text).split('\n')
+    for (var i=0; i<result.length-2; i++) { // -2 to exclude 'EOS' and ''
+        parseFunctions[method](ret, result[i].split('\t'))
+    }
+    return ret;
+};
+
 var pos = function (text, callback) {
     parse(text, 'pos', callback);
 };
@@ -79,9 +92,29 @@ var all = function (text, callback) {
     parse(text, 'all', callback);
 };
 
+var posSync = function (text) {
+    return parseSync(text, 'pos');
+}
+
+var morphsSync = function (text) {
+    return parseSync(text, 'morphs');
+}
+
+var nounsSync = function (text) {
+    return parseSync(text, 'nouns');
+}
+
+var allSync = function (text) {
+    return parseSync(text, 'all');
+}
+
 module.exports = {
     pos: pos,
     morphs: morphs,
     nouns: nouns,
-    all: all
+    all: all,
+    posSync: posSync,
+    morphsSync: morphsSync,
+    nounsSync: nounsSync,
+    allSync: allSync,
 };
