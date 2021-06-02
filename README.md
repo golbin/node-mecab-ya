@@ -78,7 +78,30 @@ mecab.nouns(text, function (err, result) {
         [ '아버지', '방' ]
     */
 });
+
+mecab.all(text, function (err, result) {
+    console.log(result);
+    /*
+        [
+          [
+            '아버지', 'NNG',
+            '*',      'F',
+            '아버지', '*',
+            '*',      '*',
+            '*'
+          ],
+          [
+            '가', 'JKS', '*',
+            'F',  '가',  '*',
+            '*',  '*',   '*'
+          ],
+          // ... and so on
+        ]
+    */
+});
 ```
+Synchronous versions are also available (just add 'Sync' to the function name)  
+ex) `console.log(mecab.posSync("아버지가방에들어가신다"))`
 
 You can find out a simple example on [node-mecab-ya-example](https://github.com/golbin/node-mecab-ya-example)
 
