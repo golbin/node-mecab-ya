@@ -37,7 +37,12 @@ var parseFunctions = {
         }
 
         return result;
-    }
+    },
+
+    'all': function (result, elems) {
+        result.push([elems[0]].concat(elems[1].split(',')));
+        return result;
+    },
 };
 
 var parse = function (text, method, callback) {
@@ -70,8 +75,13 @@ var nouns = function (text, callback) {
     parse(text, 'nouns', callback);
 };
 
+var all = function (text, callback) {
+    parse(text, 'all', callback);
+};
+
 module.exports = {
     pos: pos,
     morphs: morphs,
-    nouns: nouns
+    nouns: nouns,
+    all: all
 };
