@@ -70,8 +70,10 @@ var parse = function (text, method, callback) {
 var parseSync = function (text, method) {
     ret = [];
     result = execMecabSync(text).split('\n')
-    for (var i=0; i<result.length-2; i++) { // -2 to exclude 'EOS' and ''
-        parseFunctions[method](ret, result[i].split('\t'))
+    for (var i=0; i<result.length; i++) {
+        tmp = result[i].split('\t')
+        if (tmp.length>1)
+            parseFunctions[method](ret, tmp)
     }
     return ret;
 };
