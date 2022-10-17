@@ -24,9 +24,12 @@
     "grunt": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-nodeunit": "^1.0.0",
-    "nodeunit": "^0.9.1"
+    "nodeunit": "^0.9.1",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4"
   },
   "dependencies": {
     "shell-quote": "^1.5.0"
-  }
+  },
+  "types": "types/mecab.d.ts"
 }
