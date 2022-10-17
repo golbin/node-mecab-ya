@@ -48,8 +48,9 @@ So, you can select a mecab library for specific language when you use this and y
 
 ## Examples
 
-```
-var mecab = require('mecab-ya');
+```ts
+var mecab = require('mecab-ya'); // for JavaScript
+// import mecab from "mecab-ya"; for TypeScript
 
 var text = '아버지가방에들어가신다';
 
