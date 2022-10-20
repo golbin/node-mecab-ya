@@ -2,17 +2,17 @@
 
 ## 목차
 
-- [mecab-ko-ts](#mecab-ko-ts)
-  - [목차](#목차)
-  - [시작하기 전](#시작하기-전)
-  - [설치](#설치)
-  - [필수사항](#필수사항)
-  - [사용안내](#사용안내)
-  - [사용예시](#사용예시)
-    - [JavaScript](#javascript)
-    - [TypeScript](#typescript)
-    - [Sync](#sync)
-- [License](#license)
+-   [mecab-ko-ts](#mecab-ko-ts)
+    -   [목차](#목차)
+    -   [시작하기 전](#시작하기-전)
+    -   [설치](#설치)
+    -   [필수사항](#필수사항)
+    -   [사용안내](#사용안내)
+    -   [사용예시](#사용예시)
+        -   [JavaScript](#javascript)
+        -   [TypeScript](#typescript)
+        -   [Sync](#sync)
+-   [라이선스](#라이선스)
 
 ## 시작하기 전
 
@@ -198,6 +198,6 @@ console.log(mecab.posSync("아버지가방에들어가신다"));
     */
 ```
 
-# License
+# 라이선스
 
-MIT License
+MIT 라이선스
