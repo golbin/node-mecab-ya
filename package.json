@@ -1,25 +1,27 @@
 {
-  "name": "mecab-ya",
-  "version": "0.1.1",
-  "description": "Yet another mecab wrapper for nodejs",
+  "name": "mecab-ko-ts",
+  "version": "0.1.0",
+  "description": "mecab for korean, support typescript",
   "main": "mecab.js",
   "scripts": {
     "test": "grunt"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/golbin/node-mecab-ya.git"
+    "url": "git+https://github.com/ZETA-A/node-mecab-ko-ts"
   },
   "keywords": [
     "mecab",
-    "nlp"
+    "nlp",
+    "korean",
+    "morphological"
   ],
-  "author": "Jin Kim",
+  "author": "SeungHyun Kim",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/golbin/node-mecab-ya/issues"
+    "url": "https://github.com/ZETA-A/node-mecab-ko-ts/issues"
   },
-  "homepage": "https://github.com/golbin/node-mecab-ya#readme",
+  "homepage": "https://github.com/ZETA-A/node-mecab-ko-ts#README",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
