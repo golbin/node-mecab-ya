@@ -1,72 +1,70 @@
 # mecab-ko-ts
 
-## Table of Content
+## 목차
 
 - [mecab-ko-ts](#mecab-ko-ts)
-  - [Table of Content](#table-of-content)
-  - [About](#about)
-  - [Install](#install)
-  - [Requirements](#requirements)
-  - [Usage](#usage)
-  - [Examples](#examples)
+  - [목차](#목차)
+  - [시작하기 전](#시작하기-전)
+  - [설치](#설치)
+  - [필수사항](#필수사항)
+  - [사용안내](#사용안내)
+  - [사용예시](#사용예시)
     - [JavaScript](#javascript)
     - [TypeScript](#typescript)
     - [Sync](#sync)
 - [License](#license)
 
-## About
+## 시작하기 전
 
-[KOREAN README.md](https://github.com/ZETA-A/node-mecab-ya/blob/master/README/README_KOR.md)
+[ENGLISH README.md](https://github.com/ZETA-A/node-mecab-ya/blob/master/README.md)
 
-`mecab-ko-ts` is an updated version of [`mecab-ya`](https://github.com/golbin/node-mecab-ya).  
-The TypeScript support and Sync feature have been updated.
+`mecab-ko-ts`는 [`mecab-ya`](https://github.com/golbin/node-mecab-ya)의 업데이트 버전입니다.  
+TypeScript지원과 Sync기능이 추가되었습니다.
 
+NodeJS를 위한 또 다른 Mecab 도구는 사용하기 쉽습니다.
+[Mecab](http://taku910.github.io/mecab/)은 일본어 형태소 분석을 위해 제작되었으며, [mecab-ko](https://bitbucket.org/eunjeon/mecab-ko/)에서 한국어 형태소 분석기를 이용할 수 있습니다.
 
-Yet another mecab wrapper for nodejs and the main purpose is easy to use.  
-[Mecab](http://taku910.github.io/mecab/) is a morphological analyzer for Japanease language.  
-And you can use this for Korean language with [mecab-ko](https://bitbucket.org/eunjeon/mecab-ko/).
-
-## Install
+## 설치
 
 ```bash
 $ npm install mecab-ko-ts
 ```
 
-## Requirements
+## 필수사항
 
-You need mecab or mecab-ko for Korean language.
+한국어 형태소 분석기를 이용하기위해선 `mecab`이나 `mecab-ko`가 필요합니다.
 
-If you don't have mecab yet, you can install with the prepared script.
+만약 `mecab`이 없다면, 아래의 명령어를 통해 설치할 수 있습니다.
 
 ```bash
 $ node_modules/mecab-ko-ts/bin/install-mecab
 ```
 
-For the Korean language.
+한국어를 사용하기위해선 아래의 명령어를 입력해주세요.
 
 ```bash
 $ node_modules/mecab-ko-ts/bin/install-mecab ko
 ```
 
-## Usage
+## 사용안내
 
-mecab-ko-ts use the mecab library in the `node_modules/mecab-ko-ts/mecab` directory.
+mecab-ko-ts는 `node_modules/mecab-ko-ts/mecab`위치에 있는 `mecab`라이브러리를 사용합니다.
 
-But, you can set a mecab library path like below.
+아래의 명령 인수를 추가해 `mecab`라이브러리의 위치를 변경할 수 있습니다.
 
 ```
 MECAB_LIB_PATH=/usr/local/lib node index.js
 ```
 
-OR
+아니면
 
 ```
 MECAB_LIB_PATH=/usr/local/lib/mecab-ko node index.js
 ```
 
-So, you can select a mecab library for specific language when you use this and you can distribute this as a builtin library for AWS Lambda like that.
+그래서 이것을 사용할 때 특정 언어에 대한 mecab 라이브러리를 선택할 수 있고, AWS Lamda를 위한 내장 라이브러리로 배포할 수 있습니다.
 
-## Examples
+## 사용예시
 
 ### JavaScript
 
@@ -180,10 +178,12 @@ mecab.all(text, function (err, result) {
 
 ### Sync
 
-Synchronous versions are also available (just add 'Sync' to the function name)
+동기버전(Sync)를 사용하기위해선 함수 뒤에 Sync만 추가하면 됩니다.  
+`ex) posSync(), morphsSync()... 등`
+
 ```js
 /*
-    Example
+    예시
 */
 const mecab = require("mecab");
 
@@ -197,8 +197,6 @@ console.log(mecab.posSync("아버지가방에들어가신다"));
           [ '신다', 'EP+EC' ] ]
     */
 ```
-
-You can find out a simple example on [node-mecab-ya-example](https://github.com/golbin/node-mecab-ya-example)
 
 # License
 
